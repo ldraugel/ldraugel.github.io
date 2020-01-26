@@ -3,7 +3,6 @@ import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule } from '@angular/forms';
 
 import { AppComponent } from './app.component';
-import { HelloComponent } from './hello.component';
 import {
     MapModule, MapAPILoader, MarkerTypeId, IMapOptions, IBox, IMarkerIconInfo, WindowRef, DocumentRef, MapServiceFactory,
     BingMapAPILoaderConfig, BingMapAPILoader,
@@ -29,7 +28,7 @@ export function MapServiceProviderFactory() {
             provide: MapAPILoader, deps: [], useFactory: MapServiceProviderFactory
         }, DataService
     ],
-    declarations: [AppComponent, HelloComponent],
+    declarations: [AppComponent],
     bootstrap: [AppComponent]
 })
 export class AppModule { }
